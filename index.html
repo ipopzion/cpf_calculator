@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPF Calculator</title>
+    <!-- <link rel="stylesheet" href="style.css"></link> -->
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Details</legend>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" value=24><br>
+            <label for="income">Monthly Income:</label><br>
+            <input type="number" id="income" name="income" value=3000><br>
+            <label for="increase">Income Incr (%):</label><br>
+            <input type="number" id="increase" name="increase" value=3><br><br>
+
+            <label for="oaBal">OA Balance: </label><br>
+            <input type="number" id="oaBal" name="oaBal" value=0><br>
+            <label for="saBal">SA Balance: </label><br>
+            <input type="number" id="saBal" name="saBal" value=0><br>
+            <label for="maBal">MA Balance: </label><br>
+            <input type="number" id="maBal" name="maBal" value=0><br><br>
+
+            <label for="startDate">Start Date:</label><br>
+            <input type="month" id="startDate" name="startDate" value="2023-01"><br>
+            <label for="endDate">End Date:</label><br>
+            <input type="month" id="endDate" name="endDate"  value="2024-06"><br><br>
+
+            <input type="submit" id="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Results</legend>
+            <div id="results"><br></div><br>
+            <canvas id="balanceChart" style="width:100%;max-width:700px"></canvas>
+        </fieldset>
+    </form>
+        
+</body>
+</html>
