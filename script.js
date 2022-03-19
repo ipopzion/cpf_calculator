@@ -30,8 +30,8 @@ function calculate(parameters, dates, balance) {
     let allDates = [], oaSeries = [], saSeries = [], maSeries = [];
 
     while (!((startDate[0]==endDate[0]) && (startDate[1]==endDate[1] + 1))) {
-        allDates.push(`${startDate[0]}-${startDate[1]}`);
         startDate = increaseDate(startDate);
+        allDates.push(`${startDate[0]}-${startDate[1]}`);
         if (startDate[1]==1) { //check if january
             parameters = increaseParameters(parameters);
             [balance, interest] = transferInterest(balance, interest);
